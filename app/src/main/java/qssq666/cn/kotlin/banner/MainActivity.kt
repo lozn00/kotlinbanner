@@ -3,6 +3,7 @@ package qssq666.cn.kotlin.banner
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+//import org.jetbrains.anko.toast
 
 //import activity_main.*
 class MainActivity : AppCompatActivity() {
@@ -12,13 +13,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 //        var tv = findViewById(R.id.tv_test) as TextView
 //        find<TextView>(R.id.tv_test).setText("")
-        var text1=findViewById(R.id.tv_test)
+//        var text1=findViewById(R.id.tv_test)
 //        tv.setText("hello");
       /*  verticalLayout {
 
         }*/
 //        textview.setText()
         tv_test.setText("hello")
+//        tv_test.setOnClickListener { toast("you click me") }
+//        tv_test.setOnClickListener { this }
+
+
 
     }
 }

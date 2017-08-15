@@ -5,7 +5,9 @@ buildscript {
     ext.anko_version = '0.10.0-beta-2'
     repositories {
         jcenter()
+        maven { url 'https://maven.google.com' }
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -20,6 +22,7 @@ allprojects {
         jcenter()
 //        maven {url 'https://dl.bintray.com/jetbrains/anko'}
         maven { url "http://dl.bintray.com/kotlin/kotlin-dev" }
+//        maven { url 'https://maven.google.com' }
     }
 }
 
