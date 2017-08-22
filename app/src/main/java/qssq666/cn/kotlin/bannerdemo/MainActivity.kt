@@ -1,6 +1,7 @@
 package qssq666.cn.kotlin.bannerdemo
 
 import android.app.Activity
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.util.Log
@@ -11,12 +12,12 @@ import android.widget.Toast
 import cn.qssq666.banner.Banner
 import com.nostra13.universalimageloader.core.ImageLoader
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration
+import kotlinx.android.synthetic.main.activity_main.*
 import qssq666.cn.kotlin.bannerdemo.transformer.*
 import java.util.*
 
 class MainActivity : Activity() {
 
-    private var banner: Banner? = null
     private var imageLoader: ImageLoader? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,9 +50,11 @@ class MainActivity : Activity() {
                 imageView.layoutParams = params
                 imageView.scaleType = ImageView.ScaleType.CENTER_CROP
                 if (model is MyImageInfo) {
+                    imageView.setBackgroundColor(Color.RED);
                     ImageLoader.getInstance().displayImage(model.imageUrl, imageView)
-                }else{
-                    Log.w(TAG,"ERROR: model type:${model.javaClass.name}");
+                    Log.w(TAG, "succ: model type:${model.javaClass.name} image,${model.imageUrl}");
+                } else {
+                    Log.w(TAG, "ERROR: model type:${model.javaClass.name}");
                 }
                 return imageView
             }
