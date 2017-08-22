@@ -5,6 +5,7 @@ buildscript {
     ext.anko_version = '0.10.1'
     repositories {
         jcenter()
+        google()
         maven { url 'https://maven.google.com' }
     }
 
@@ -20,7 +21,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-
+    google()
 //        maven {url 'https://dl.bintray.com/jetbrains/anko'}
         maven { url "http://dl.bintray.com/kotlin/kotlin-dev" }
 //        maven { url 'https://maven.google.com' }
